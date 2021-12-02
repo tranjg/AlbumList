@@ -1,4 +1,64 @@
 ﻿@page
 @model AlbumList.Pages.GroupModel
 @{
+    ViewData["Title"] = "Our Group";
 }
+<style>
+    .grid-container {
+        display: grid;
+        grid-template-columns: auto auto auto;
+        padding: 10px;
+    }
+
+    .grid-item {
+        padding: 20px;
+        font-size: 30px;
+        text-align: left;
+    }
+</style>
+<body>
+    <header>
+        <div>
+            <span class="text-dark" style="font-size:90px">
+                Our Group
+            </span>
+        </div>
+    </header>
+    <div>
+        <div>
+            <h3>We are Group 3.</h3>
+            <div class="grid-container">
+                <a href="http://github.com/zahercj/">
+                    <div class="grid-item">
+                        <img src="https://avatars.githubusercontent.com/u/62187909?v=4" style="width:100%;max-width:200px;max-height:200px">
+                        <h5>Corey</h5>
+                    </div>
+                </a>
+                <a href="https://github.com/bdaha">
+                    <div class="grid-item">
+                        <img src="https://avatars.githubusercontent.com/u/60723232?v=4" style="width:100%;max-width:200px;max-height:200px">
+                        <h5>Binod</h5>
+                    </div>
+                </a>
+                <a href="https://github.com/Blake-Barr">
+                    <div class="grid-item">
+                        <img src="https://avatars.githubusercontent.com/u/59884862?v=4" style="width:100%;max-width:200px;max-height:200px">
+                        <h5>Blake</h5>
+                    </div>
+                </a>
+                <a href="https://github.com/bolandmj">
+                    <div class="grid-item">
+                        <img src="https://avatars.githubusercontent.com/u/81503684?v=4" style="width:100%;max-width:200px;max-height:200px">
+                        <h5>Maxwell</h5>
+                    </div>
+                </a>
+                <a href="https://github.com/tranjg">
+                    <div class="grid-item">
+                        <img src="https://avatars.githubusercontent.com/u/64545910?v=4" style="width:100%;max-width:200px;max-height:200px">
+                        <h5>Justin</h5>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+</body>
