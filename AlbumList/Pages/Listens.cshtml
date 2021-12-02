@@ -1,4 +1,33 @@
 ﻿@page
 @model AlbumList.Pages.ListensModel
 @{
+    ViewData["Title"] = "Recent Listens";
 }
+<body>
+    <header>
+        <div>
+            <span class="text-dark" style="font-size:90px">
+                Our Recent Listens
+            </span>
+        </div>
+    </header>
+    <h3>Stuff we've been listening to.</h3>
+    <a asp-action="Add" class="btn btn-dark mr-2">Add a song</a>
+    <table class="table table-striped mt-2">
+        <thead>
+            <tr><th>Song</th><th>Artist</th><th>Album</th><th>Rating</th><th></th></tr>
+        </thead>
+        <tbody>
+            @*@foreach (Song song in Model)
+                {
+                    <tr>
+                        <td>@song.Title</td>
+                        <td>@song.Artist</td>
+                        <td>@song.Album</td>
+                        <td>@song.Rating</td>
+                        <td><a asp-action="Delete" asp-route-id="@song.Id" class="btn btn-dark">Delete</a></td>
+                    </tr>
+                }*@
+        </tbody>
+    </table>
+</body>
