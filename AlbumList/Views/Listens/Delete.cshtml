@@ -1,0 +1,22 @@
+﻿@model AlbumList.Models.ListensModel
+@{
+    ViewData["Title"] = "Home page";
+}
+<body>
+    <header>
+        <div>
+            <span class="text-dark" style="font-size:90px">
+                Delete <h3>@Model.Title</h3>
+            </span>
+
+            <form asp-action="Delete" method="post">
+                <input type="hidden" asp-for="ListensModelId" />
+                <button type="submit" class="btn btn-dark">Delete</button>
+                <a asp-action="Index" asp-controller="Listens" class="btn btn-outline-dark">Cancel</a>
+            </form>
+        </div>
+    </header>
+    <div>
+
+    </div>
+</body>

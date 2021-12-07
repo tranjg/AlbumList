@@ -9,8 +9,9 @@ namespace AlbumList.Models
             : base(options)
         { }
 
-        public System.Data.Entity.DbSet<Album> Albums { get; set; }
+        public DbSet<Album> Albums { get; set; }
 
+        public DbSet<ListensModel> Listens { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {

@@ -22,5 +22,17 @@ namespace AlbumList.Controllers
          var albums = context.Albums;
             return View(albums);
         }
+
+        [Route("/Home/Albums", Name = "albums")]
+        public IActionResult Albums() => View();
+
+        [Route("/Home/Artists", Name = "artists")]
+        public IActionResult Artists() => View();
+
+        [Route("/Home/Live", Name = "live")]
+        public IActionResult Live() => View();
+
+        [Route("/Home/Group", Name = "group")]
+        public IActionResult Group() => View();
     }
 }

@@ -31,8 +31,8 @@ namespace AlbumList
                    "Server=(localdb)\\mssqllocaldb;Database=AlbumList;Trusted_Connection=True;MultipleActiveResultSets=true"));
             services.AddRouting(options =>
             {
-                options.LowercaseUrls = true;
-                options.AppendTrailingSlash = true;
+                options.LowercaseUrls = false;
+                options.AppendTrailingSlash = false;
             });
         }
 
@@ -48,7 +48,7 @@ namespace AlbumList
             {
                 endpoints.MapControllerRoute(
                     name: "default",
-                    pattern: "{controller=Home}/{action=Index}/{id?}");
+                    pattern: "{controller=Home}/{action=Index}");
             });
         }
     }
