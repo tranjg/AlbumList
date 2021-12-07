@@ -9,24 +9,58 @@ namespace AlbumList.Models
             : base(options)
         { }
 
-        public DbSet<Album> Albums { get; set; }
-
         public DbSet<ListensModel> Listens { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            modelBuilder.Entity<Album>().HasData(
-                new Album
+            modelBuilder.Entity<ListensModel>().HasData(
+                new ListensModel
                 {
-                    AlbumId = 1,
-                    Name = "Example Album",
-                    Year = 2020
+                    ListensModelId = 1,
+                    Title = "Ivy",
+                    Album = "Blonde",
+                    Artist = "Frank Ocean",
+                    Rating = 6
                 },
-                new Album
+                new ListensModel
                 {
-                    AlbumId = 2,
-                    Name = "Example Album 2",
-                    Year = 2021
+                    ListensModelId = 2,
+                    Title = "#3",
+                    Album = "Selected Ambient Works Volume II",
+                    Artist = "Aphex Twin",
+                    Rating = 3
+                },
+                new ListensModel
+                {
+                    ListensModelId = 3,
+                    Title = "Fake Plastic Trees",
+                    Album = "The Bends",
+                    Artist = "Radiohead",
+                    Rating = 9
+                },
+                new ListensModel
+                {
+                    ListensModelId = 4,
+                    Title = "Kickback",
+                    Album = "Kickback",
+                    Artist = "KanKan",
+                    Rating = 5
+                },
+                new ListensModel
+                {
+                    ListensModelId = 5,
+                    Title = "Everyday",
+                    Album = "After Me",
+                    Artist = "SoFaygo",
+                    Rating = 6
+                },
+                new ListensModel
+                {
+                    ListensModelId = 6,
+                    Title = "Kiss Me Like It's the First Time",
+                    Album = "Let's Skip to the Wedding",
+                    Artist = "Eyedress",
+                    Rating = 1
                 }
            );
         }

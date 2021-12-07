@@ -19,8 +19,7 @@ namespace AlbumList.Controllers
         }
         public IActionResult Index()
         {
-         var albums = context.Albums;
-            return View(albums);
+            return View();
         }
 
         [Route("/Home/Albums", Name = "albums")]
