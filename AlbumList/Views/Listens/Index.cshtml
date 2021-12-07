@@ -24,7 +24,7 @@
                         <td>@song.Artist</td>
                         <td>@song.Album</td>
                         <td>@song.Rating</td>
-                        <td><a asp-action="Delete" asp-route-id="@song.ListensModelId" class="btn btn-dark">Delete</a></td>
+                        <td><a asp-controller="Listens" asp-action="Delete" asp-route-id="@song.ListensModelId"class="btn btn-dark">Delete</a></td>
                     </tr>
                 }
         </tbody>

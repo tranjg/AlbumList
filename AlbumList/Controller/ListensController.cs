@@ -41,5 +41,22 @@ namespace AlbumList.Controllers
                 return View(s);
             }
         }
+
+
+        [HttpGet]
+        public ViewResult Delete(int id)
+        {
+            var l = Listens.Get(id);
+
+            return View(l);
+        }
+
+        [HttpPost]
+        public RedirectToActionResult Delete(ListensModel listen)
+        {
+            Listens.Delete(listen);
+            Listens.Save();
+            return RedirectToAction("Index");
+        }
     }
 }
