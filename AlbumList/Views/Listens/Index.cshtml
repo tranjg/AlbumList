@@ -1,4 +1,4 @@
-﻿@model IEnumerable<ListensModel>
+﻿@model IEnumerable<AlbumList.Models.ListensModel>
 @{
     ViewData["Title"] = "Listens";
 }
@@ -17,14 +17,14 @@
             <tr><th>Song</th><th>Artist</th><th>Album</th><th>Rating</th><th></th></tr>
         </thead>
         <tbody>
-            @foreach (ListensModel song in Model)
+            @foreach (AlbumList.Models.ListensModel song in Model)
                 {
                     <tr>
                         <td>@song.Title</td>
                         <td>@song.Artist</td>
                         <td>@song.Album</td>
                         <td>@song.Rating</td>
-                        <td><a asp-action="Delete" asp-route-id="@song.Id" class="btn btn-dark">Delete</a></td>
+                        <td><a asp-action="Delete" asp-route-id="@song.ListensModelId" class="btn btn-dark">Delete</a></td>
                     </tr>
                 }
         </tbody>

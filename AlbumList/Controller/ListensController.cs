@@ -19,7 +19,7 @@ namespace AlbumList.Controllers
         }
 
         [Route("/Home/Listens", Name = "listens")]
-        public IActionResult Index() => View();
+        public IActionResult Index() => View(Listens.List());
 
         [HttpGet]
         public ViewResult Add()
