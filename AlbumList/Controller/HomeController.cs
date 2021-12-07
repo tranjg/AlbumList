@@ -29,9 +29,6 @@ namespace AlbumList.Controllers
         [Route("/Home/Artists", Name = "artists")]
         public IActionResult Artists() => View();
 
-        [Route("/Home/Listens", Name = "listens")]
-        public IActionResult Listens() => View();
-
         [Route("/Home/Live", Name = "live")]
         public IActionResult Live() => View();
 

@@ -5,6 +5,9 @@ namespace AlbumList.Models
 {
     public class ListensModel
     {
+
+        public int ListensModelId { get; set; }
+
         [Required(ErrorMessage = "Please enter a title")]
         public string Title { get; set; }
 
